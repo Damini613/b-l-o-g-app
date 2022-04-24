@@ -8,6 +8,9 @@ const router = require("./routes/blogs");
 connectDB();
 app.use(cors());
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const PORT = process.env.PORT || 8000;
 
 if ((process.env.NODE_ENV = "production")) {
@@ -17,9 +20,6 @@ if ((process.env.NODE_ENV = "production")) {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 app.use(router);
 
