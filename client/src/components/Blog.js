@@ -20,7 +20,7 @@ export default class Blog extends Component {
 
   getMethod = async () => {
     try {
-      const data = await fetch(`/`, {
+      const data = await fetch(`/get`, {
         method: "get",
         headers: { "Content-Type": "application/json" },
       });
@@ -74,7 +74,7 @@ export default class Blog extends Component {
 
   postMethod = async (payload) => {
     try {
-      const data = await fetch(`/`, {
+      const data = await fetch(`/post`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

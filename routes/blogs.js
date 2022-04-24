@@ -96,11 +96,11 @@ const likeBlogPost = async (req, res) => {
   }
 };
 
-router.get("/", getAllBlogPosts);
-router.post("/", addBlogPost);
-router.get("/:id", getSinglePost);
-router.patch("/:id", updateSingleBlogPost);
-router.delete("/:id", removeSingleBlogPost);
+router.get("/get", getAllBlogPosts);
+router.post("/post", addBlogPost);
+router.get("/get/:id", getSinglePost);
+router.patch("/patch/:id", updateSingleBlogPost);
+router.delete("/delete/:id", removeSingleBlogPost);
 router.patch("/:id/likeedBlogPost", likeBlogPost);
 
 module.exports = router;

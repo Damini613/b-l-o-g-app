@@ -34,7 +34,7 @@ export default class AllPost extends Component {
 
   getMethod = async () => {
     try {
-      const data = await fetch(`/`, {
+      const data = await fetch(`/get`, {
         method: "get",
         headers: { "Content-Type": "application/json" },
       });
@@ -51,7 +51,7 @@ export default class AllPost extends Component {
 
   deleteMethod = async (id) => {
     try {
-      const data = await fetch(`/${id}`, {
+      const data = await fetch(`/delete/${id}`, {
         method: "delete",
         headers: { "Content-Type": "application/json" },
       });

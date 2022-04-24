@@ -38,7 +38,7 @@ export default class UpdateBlogs extends Component {
     };
     console.log("id", id);
     try {
-      const data = await fetch(`/${id}`, {
+      const data = await fetch(`/patch/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

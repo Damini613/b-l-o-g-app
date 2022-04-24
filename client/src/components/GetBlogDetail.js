@@ -18,7 +18,7 @@ export default class GetBlogDetail extends Component {
 
   getMethod = async (id) => {
     try {
-      const data = await fetch(`/${id}`, {
+      const data = await fetch(`/get/${id}`, {
         method: "get",
         headers: { "Content-Type": "application/json" },
       });

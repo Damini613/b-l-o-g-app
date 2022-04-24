@@ -50,7 +50,7 @@ export default class AllBlogs extends Component {
 
   getMethod = async () => {
     try {
-      const data = await fetch(`/`, {
+      const data = await fetch(`/get`, {
         method: "get",
         headers: { "Content-Type": "application/json" },
       });
