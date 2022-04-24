@@ -202,7 +202,7 @@ export default class AllPost extends Component {
 
         <div className="row">
           <div className="row">
-            <div className="col-4">
+            <div className="col-sm-4">
               <div className="container blogCss">
                 {/* <label htmlFor="">Upload Blog Image</label>
         <input
@@ -261,7 +261,10 @@ export default class AllPost extends Component {
                 </button>
               </div>
             </div>
-            <div className="col-8" style={{ height: "85vh", overflow: "auto" }}>
+            <div
+              className="col-sm-8"
+              style={{ height: "85vh", overflow: "auto" }}
+            >
               <div>
                 {this.state.data.map((x, index) => (
                   <div key={index} className="cardsCss">
