@@ -34,10 +34,7 @@ export default class AllPost extends Component {
 
   getMethod = async () => {
     try {
-      const data = await fetch(`/get`, {
-        method: "get",
-        headers: { "Content-Type": "application/json" },
-      });
+      const data = await fetch(`/get`);
       if (data.status === 200) {
         const resp = await data.json();
         this.setState({
@@ -104,7 +101,7 @@ export default class AllPost extends Component {
 
   postMethod = async (payload) => {
     try {
-      const data = await fetch(`/`, {
+      const data = await fetch(`/post`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

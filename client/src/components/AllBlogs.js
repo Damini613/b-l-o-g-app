@@ -50,10 +50,7 @@ export default class AllBlogs extends Component {
 
   getMethod = async () => {
     try {
-      const data = await fetch(`/get`, {
-        method: "get",
-        headers: { "Content-Type": "application/json" },
-      });
+      const data = await fetch(`/get`);
       if (data.status === 200) {
         const resp = await data.json();
         this.setState(
@@ -72,7 +69,7 @@ export default class AllBlogs extends Component {
 
   deleteMethod = async (id) => {
     try {
-      const data = await fetch(`/${id}`, {
+      const data = await fetch(`/delete/${id}`, {
         method: "delete",
         headers: { "Content-Type": "application/json" },
       });
